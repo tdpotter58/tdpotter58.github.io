@@ -1,0 +1,65 @@
+---
+title: "Projects"
+---
+
+There is a growing list of personal projects that I am excited to dive into as time goes on. A lot of them are focused on sports statistics or fun data analysis. Here I will provide a brief overview of what I have done, as well as links to the full body of work.
+
+## [Runs Batted In Vs Total Opportunities](https://github.com/tdpotter58/rbis-per-opportunity)
+
+```{r libraries, echo = FALSE, warning=FALSE}
+library(dplyr)
+library(ggplot2)
+library(ggrepel)
+```
+
+```{r rbi1, echo = FALSE, fig.width= 12, fig.height = 8}
+theme_set(theme_bw())
+rbis_full <- read.csv("rbis-full.csv")
+rbis_full <- rbis_full %>%
+  mutate(rbi_percentage = round(RBI / Chances, digits = 4))
+
+rbis_2020 <- read.csv("rbis-2020.csv")
+rbis_2020 <- rbis_2020 %>%
+  mutate(rbi_percentage = round(RBI / Chances, digits = 4))
+
+mean_2020 <- sum(rbis_2020[["RBI"]]) / sum(rbis_2020[["Chances"]])
+rbis_2020 %>%
+  filter(Chances > 4) %>%
+  ggplot(aes(x = Chances, y = rbi_percentage, label = Player)) + 
+  geom_hline(yintercept = mean_2020, linetype = "dashed", color = "red", size = 2) +
+  geom_point(data = subset(rbis_2020, Chances >= 29 | (Chances > 4 & rbi_percentage > 0.65))) + 
+  geom_text(data = subset(rbis_2020, Chances < 29 & (Chances > 4 & rbi_percentage <= 0.65)),size = 3) +
+  geom_label_repel(data = subset(rbis_2020, Chances >= 29 | (Chances > 4 & rbi_percentage > 0.65)), aes(fill = RBI),size = 3) +
+  scale_fill_gradient(low = 'blue', high = 'red') +
+  ggtitle("RBI Earned with Runner at Third Base, 2020") +
+  xlab("At-Bats with a Runner at Third Base")+
+  ylab("Proportion of Runners Batted In") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(caption = "League Average = 0.376")
+```
+A look at how often each MLB player came to the plate with a runner at third base, and how often they were able to score said runner. I wanted to see what players were the most efficient in this situation, and what players just had better chances to inflate their RBI numbers. Data was scraped from Baseball Reference for the 2016-2020 MLB seasons.
+
+```{r rbi, echo = FALSE, fig.align='center', fig.width= 15, fig.height = 10}
+
+
+head(rbis_full, n = 15)
+
+mean_full <- sum(rbis_full[["RBI"]]) / sum(rbis_full[["Chances"]])
+rbis_full %>%
+  filter(Chances > 20) %>%
+  ggplot(aes(x = Chances, y = rbi_percentage, label = Player)) + 
+  geom_hline(yintercept = mean_full, linetype = "dashed", color = "red", size = 2) +
+  geom_text() +
+  scale_fill_gradient(low = 'blue', high = 'red') +
+  ggtitle("RBI Earned with Runner at Third Base, 2016-2020") +
+  xlab("At-Bats with a Runner at Third Base")+
+  ylab("Proportion of Runners Batted In") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(caption = "League Average = 0.384")
+```
+
+The full analysis, as well as the code and datasets, can be found in my GitHub.
+
+## [Other Projects](https://github.com/tdpotter58)
+
+Looking for more? Here's a mixture of classwork and other personal projects that are incomplete/in the works. More projects will be added above when I finally get around to putting them together.

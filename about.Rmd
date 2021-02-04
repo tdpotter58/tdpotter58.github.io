@@ -2,4 +2,11 @@
 title: "About Me"
 ---
 
-Why I am awesome. 
+- __Name:__ Timothy Potter
+- __Ocupation:__ Student, Data Science
+- __Graduation Date:__ Expected May 2021
+- __Hobbies:__ Books, Video Games, Baseball, Disc Golf
+
+Here is a super cool photo of me doing one of my favorite things, brushing my teeth. 
+
+![](teeth.jpg)
