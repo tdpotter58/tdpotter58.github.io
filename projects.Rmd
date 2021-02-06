@@ -37,7 +37,7 @@ rbis_2020 %>%
   theme(plot.title = element_text(hjust = 0.5)) +
   labs(caption = "League Average = 0.376")
 ```
-A look at how often each MLB player came to the plate with a runner at third base, and how often they were able to score said runner. I wanted to see what players were the most efficient in this situation, and what players just had better chances to inflate their RBI numbers. Data was scraped from Baseball Reference for the 2016-2020 MLB seasons.
+A look at how often each MLB player came to the plate with a runner at third base, and how often they were able to score said runner. I wanted to see what players were the most efficient in this situation, and what players just had better chances to inflate their RBI numbers. Data was scraped from Baseball-Reference for the 2016-2020 MLB seasons.
 
 ```{r rbi, echo = FALSE, fig.align='center', fig.width= 15, fig.height = 10}
 

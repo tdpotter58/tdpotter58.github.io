@@ -2,4 +2,17 @@
 title: "Personal Website"
 ---
 
-Hello, World!
+Hello There! Thanks for visiting my website. 
+
+For those of you that don't know, my name is Timothy Potter. Feel free to click through the pages to learn more about me personally, professionally, and some projects I've worked on. 
+
+## Links to my online presence
+
+
+[Github](https://github.com/tdpotter58)
+
+[LinkedIn](https://www.linkedin.com/in/timothy-potter-75a100161/)
+
+## Contact Information
+
+If you would like to contact me, feel free to email me at tdpotter58@gmail.com
