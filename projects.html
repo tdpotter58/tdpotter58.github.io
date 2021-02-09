@@ -302,24 +302,115 @@ $(document).ready(function () {
 <div id="runs-batted-in-vs-total-opportunities" class="section level2">
 <h2><a href="https://github.com/tdpotter58/rbis-per-opportunity">Runs Batted In Vs Total Opportunities</a></h2>
 <p><img src="projects_files/figure-html/rbi1-1.png" width="1152" /> A look at how often each MLB player came to the plate with a runner at third base, and how often they were able to score said runner. I wanted to see what players were the most efficient in this situation, and what players just had better chances to inflate their RBI numbers. Data was scraped from Baseball-Reference for the 2016-2020 MLB seasons.</p>
-<pre><code>##              Player RBI Chances rbi_percentage
-## 1     Justin Turner  81     171         0.4737
-## 2         Max Muncy  47     121         0.3884
-## 3    Cody Bellinger  63     168         0.3750
-## 4      Corey Seager  73     170         0.4294
-## 5      Mookie Betts 127     237         0.5359
-## 6  Christian Walker  26      98         0.2653
-## 7   Ildemaro Vargas  15      29         0.5172
-## 8        Matt Beaty  17      31         0.5484
-## 9      Joc Pederson  63     174         0.3621
-## 10     Kole Calhoun  93     207         0.4493
-## 11     Chris Taylor  66     162         0.4074
-## 12  George Springer  96     228         0.4211
-## 13      Jose Altuve 105     211         0.4976
-## 14     Abraham Toro   5      24         0.2083
-## 15    David Peralta  65     168         0.3869</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Player</th>
+<th align="right">RBI</th>
+<th align="right">Chances</th>
+<th align="right">rbi_percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Justin Turner</td>
+<td align="right">81</td>
+<td align="right">171</td>
+<td align="right">0.4737</td>
+</tr>
+<tr class="even">
+<td align="left">Max Muncy</td>
+<td align="right">47</td>
+<td align="right">121</td>
+<td align="right">0.3884</td>
+</tr>
+<tr class="odd">
+<td align="left">Cody Bellinger</td>
+<td align="right">63</td>
+<td align="right">168</td>
+<td align="right">0.3750</td>
+</tr>
+<tr class="even">
+<td align="left">Corey Seager</td>
+<td align="right">73</td>
+<td align="right">170</td>
+<td align="right">0.4294</td>
+</tr>
+<tr class="odd">
+<td align="left">Mookie Betts</td>
+<td align="right">127</td>
+<td align="right">237</td>
+<td align="right">0.5359</td>
+</tr>
+<tr class="even">
+<td align="left">Christian Walker</td>
+<td align="right">26</td>
+<td align="right">98</td>
+<td align="right">0.2653</td>
+</tr>
+<tr class="odd">
+<td align="left">Ildemaro Vargas</td>
+<td align="right">15</td>
+<td align="right">29</td>
+<td align="right">0.5172</td>
+</tr>
+<tr class="even">
+<td align="left">Matt Beaty</td>
+<td align="right">17</td>
+<td align="right">31</td>
+<td align="right">0.5484</td>
+</tr>
+<tr class="odd">
+<td align="left">Joc Pederson</td>
+<td align="right">63</td>
+<td align="right">174</td>
+<td align="right">0.3621</td>
+</tr>
+<tr class="even">
+<td align="left">Kole Calhoun</td>
+<td align="right">93</td>
+<td align="right">207</td>
+<td align="right">0.4493</td>
+</tr>
+<tr class="odd">
+<td align="left">Chris Taylor</td>
+<td align="right">66</td>
+<td align="right">162</td>
+<td align="right">0.4074</td>
+</tr>
+<tr class="even">
+<td align="left">George Springer</td>
+<td align="right">96</td>
+<td align="right">228</td>
+<td align="right">0.4211</td>
+</tr>
+<tr class="odd">
+<td align="left">Jose Altuve</td>
+<td align="right">105</td>
+<td align="right">211</td>
+<td align="right">0.4976</td>
+</tr>
+<tr class="even">
+<td align="left">Abraham Toro</td>
+<td align="right">5</td>
+<td align="right">24</td>
+<td align="right">0.2083</td>
+</tr>
+<tr class="odd">
+<td align="left">David Peralta</td>
+<td align="right">65</td>
+<td align="right">168</td>
+<td align="right">0.3869</td>
+</tr>
+</tbody>
+</table>
 <p><img src="projects_files/figure-html/rbi-1.png" width="1440" style="display: block; margin: auto;" /></p>
 <p>The full analysis, as well as the code and datasets, can be found in my GitHub.</p>
+</div>
+<div id="pitching-extremes" class="section level2">
+<h2><a href="https://github.com/tdpotter58/pitching-extremes">Pitching Extremes</a></h2>
+<p><img src="projects_files/figure-html/pitching-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p>Sometimes in baseball, a pitcher can have a tremendous season throwing the ball and get no run support from his offense. In other cases the reverse happens, and a mediocre pitcher reaps the benefits of playing on a good team. This is a quick visualization of seasons where a pitcher was credited with more losses or wins than they deserved.</p>
 </div>
 <div id="other-projects" class="section level2">
 <h2><a href="https://github.com/tdpotter58">Other Projects</a></h2>

@@ -8,17 +8,21 @@ There is a growing list of personal projects that I am excited to dive into as t
 
 ```{r libraries, echo = FALSE, warning=FALSE}
 library(dplyr)
+library(tidyr)
+library(knitr)
+library(readr)
 library(ggplot2)
 library(ggrepel)
+library(stringr)
 ```
 
 ```{r rbi1, echo = FALSE, fig.width= 12, fig.height = 8}
 theme_set(theme_bw())
-rbis_full <- read.csv("rbis-full.csv")
+rbis_full <- read.csv("data/rbis-full.csv")
 rbis_full <- rbis_full %>%
   mutate(rbi_percentage = round(RBI / Chances, digits = 4))
 
-rbis_2020 <- read.csv("rbis-2020.csv")
+rbis_2020 <- read.csv("data/rbis-2020.csv")
 rbis_2020 <- rbis_2020 %>%
   mutate(rbi_percentage = round(RBI / Chances, digits = 4))
 
@@ -42,7 +46,7 @@ A look at how often each MLB player came to the plate with a runner at third bas
 ```{r rbi, echo = FALSE, fig.align='center', fig.width= 15, fig.height = 10}
 
 
-head(rbis_full, n = 15)
+kable(head(rbis_full, n = 15))
 
 mean_full <- sum(rbis_full[["RBI"]]) / sum(rbis_full[["Chances"]])
 rbis_full %>%
@@ -59,6 +63,40 @@ rbis_full %>%
 ```
 
 The full analysis, as well as the code and datasets, can be found in my GitHub.
+
+## [Pitching Extremes](https://github.com/tdpotter58/pitching-extremes)
+
+```{r pitching, echo = FALSE, message=FALSE, fig.align='center', fig.width= 10, fig.height = 6}
+pitchers <- read_csv("data/pitcher-data.csv")
+pitchers <- pitchers %>%
+  select(-Pit, -Str) %>%
+  drop_na()
+pitchers <- pitchers %>%
+  mutate(Year_ch = as.character(pitchers$Year))
+         
+for (i in pitchers$Rk){
+  name <- str_split(pitchers[i,2], "-")[[1]]
+  
+  pitchers[i,2] <- str_c(name[1],pitchers[i,48], sep = " ")
+}
+pitchers <- pitchers %>%
+  mutate(Player.f = as.factor(pitchers$Player))
+pitchers$Player.f <- factor(pitchers$Player.f, levels = pitchers$Player.f[order(pitchers$`W-L%`)])
+
+theme_set(theme_bw())
+pitchers %>%
+  filter(`W-L%` < 0.5) %>%
+  ggplot(aes(x = ERA, y = `W-L%`, label = Player)) + 
+  geom_point(size = 2) +
+  geom_label_repel(data = subset(pitchers, `W-L%` < 0.34), fill = 'cyan') +
+  geom_label_repel(data = subset(pitchers, ERA < 2.25), fill = 'coral') +
+  ylab("Winning Percentage") +
+  ggtitle("Every Qualified Season Since 1968 with an ERA Below 3.00 and More Losses than Wins") +
+  labs(caption = "Data from Baseball-Reference") +
+  theme(plot.title = element_text(hjust = 0.5)) 
+```
+
+Sometimes in baseball, a pitcher can have a tremendous season throwing the ball and get no run support from his offense. In other cases the reverse happens, and a mediocre pitcher reaps the benefits of playing on a good team. This is a quick visualization of seasons where a pitcher was credited with more losses or wins than they deserved. 
 
 ## [Other Projects](https://github.com/tdpotter58)
 
