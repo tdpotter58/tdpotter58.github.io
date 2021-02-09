@@ -2,6 +2,7 @@
 title: "Timothy Potter - Personal Website"
 ---
 
+![](plot.png)
 Hello There! Thanks for visiting my website. 
 
 For those of you that don't know, my name is Timothy Potter. Feel free to click through the pages to learn more about me personally, professionally, and some projects I've worked on. 
