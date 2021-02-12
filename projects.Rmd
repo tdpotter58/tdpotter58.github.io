@@ -6,7 +6,7 @@ There is a growing list of personal projects that I am excited to dive into as t
 
 ## [Runs Batted In Vs Total Opportunities](https://github.com/tdpotter58/rbis-per-opportunity)
 
-```{r libraries, echo = FALSE, warning=FALSE}
+```{r libraries, echo = FALSE, warning=FALSE, message=FALSE}
 library(dplyr)
 library(tidyr)
 library(knitr)
