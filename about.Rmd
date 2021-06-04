@@ -2,13 +2,13 @@
 title: "About Me"
 ---
 
-![](teeth.jpg)
+![](_DSC0234.jpg)
 
 ## Personal Information
 
-Let's talk about me. My name is Timothy Potter. I am a senior at Iowa State University, expecting to graduate in May of 2021 with a bachelor's degree in Data Science. I am currently a Dairy clerk a the West Ames Hy-Vee and have been at the store for a little over 4 years now. Some of my hobbies include reading, gaming, playing disc golf, and watching baseball. Sports statistics are a personal passion of mine. Landing a position in the Stats and Analytics department of a professional baseball organization would be a dream job for me. I am an avid weightlifter and spend a significant amount of time and focus on improving my body. Also, at least right now, I'm pretty into mid-2000s pop-punk.
+Let's talk about me. My name is Timothy Potter. I graduated from Iowa State Univerisity in the spring of 2021 with a Bachelor's Degree in Data Science. I am currently a Dairy clerk a the West Ames Hy-Vee and have been at the store for a little over 4 years now. I am also working part time as a research analyst for PSC, a public research group based out of Iowa Sate University. Some of my hobbies include reading, gaming, playing disc golf, and watching baseball. Sports statistics are a personal passion of mine. Landing a position in the Stats and Analytics department of a professional baseball organization would be a dream job for me. I am an avid weightlifter and spend a significant amount of time and focus on improving my body. Also, at least right now, I'm pretty into mid-2000s pop-punk.
 
 ## Course Work
 
-I spent the first three years of my college education as a Software Engineer major. I know a good deal of Java and C, have a strong understanding of software project basics, and know how to figure out what I don't know. As a Data Scientist, I am proficient in R, have a little exposure to things like Python and Machine Learning, and am developing my understanding of statistical methods that will be useful in my career. I have excelled academically with a 3.25 cumulative GPA, and am ready to prove myself in the workforce. You can find the rest of my skills in my [resume](tdpotter-resume.pdf).
+I spent the first three years of my college education as a Software Engineer major. I know a good deal of Java and C, have a strong understanding of software project basics, and know how to figure out what I don't know. As a Data Scientist, I am proficient in R, have a little exposure to things like Python and Machine Learning, and am developing my understanding of statistical methods that will be useful in my career. I excelled academically with a 3.26 cumulative GPA, and am ready to prove myself in the workforce. You can find the rest of my skills in my [resume](tdpotter-resume.pdf).
 

@@ -7,6 +7,8 @@ navbar:
       href: index.html
     - text: "About Me"
       href: about.html
+    - text: "Work Experience"
+      href: work.html
     - text: "Projects"
       href: projects.html
 output:

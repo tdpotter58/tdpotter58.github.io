@@ -23,6 +23,15 @@
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
   pre:not([class]) {
@@ -67,6 +76,7 @@ h6 {
   text-align: left;
 }
 </style>
+
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -279,6 +289,9 @@ $(document).ready(function () {
   <a href="about.html">About Me</a>
 </li>
 <li>
+  <a href="work.html">Work Experience</a>
+</li>
+<li>
   <a href="projects.html">Projects</a>
 </li>
       </ul>
@@ -298,14 +311,14 @@ $(document).ready(function () {
 </div>
 
 
-<p><img src="teeth.jpg" /></p>
+<p><img src="_DSC0234.jpg" /></p>
 <div id="personal-information" class="section level2">
 <h2>Personal Information</h2>
-<p>Let’s talk about me. My name is Timothy Potter. I am a senior at Iowa State University, expecting to graduate in May of 2021 with a bachelor’s degree in Data Science. I am currently a Dairy clerk a the West Ames Hy-Vee and have been at the store for a little over 4 years now. Some of my hobbies include reading, gaming, playing disc golf, and watching baseball. Sports statistics are a personal passion of mine. Landing a position in the Stats and Analytics department of a professional baseball organization would be a dream job for me. I am an avid weightlifter and spend a significant amount of time and focus on improving my body. Also, at least right now, I’m pretty into mid-2000s pop-punk.</p>
+<p>Let’s talk about me. My name is Timothy Potter. I graduated from Iowa State Univerisity in the spring of 2021 with a Bachelor’s Degree in Data Science. I am currently a Dairy clerk a the West Ames Hy-Vee and have been at the store for a little over 4 years now. I am also working part time as a research analyst for PSC, a public research group based out of Iowa Sate University. Some of my hobbies include reading, gaming, playing disc golf, and watching baseball. Sports statistics are a personal passion of mine. Landing a position in the Stats and Analytics department of a professional baseball organization would be a dream job for me. I am an avid weightlifter and spend a significant amount of time and focus on improving my body. Also, at least right now, I’m pretty into mid-2000s pop-punk.</p>
 </div>
 <div id="course-work" class="section level2">
 <h2>Course Work</h2>
-<p>I spent the first three years of my college education as a Software Engineer major. I know a good deal of Java and C, have a strong understanding of software project basics, and know how to figure out what I don’t know. As a Data Scientist, I am proficient in R, have a little exposure to things like Python and Machine Learning, and am developing my understanding of statistical methods that will be useful in my career. I have excelled academically with a 3.25 cumulative GPA, and am ready to prove myself in the workforce. You can find the rest of my skills in my <a href="tdpotter-resume.pdf">resume</a>.</p>
+<p>I spent the first three years of my college education as a Software Engineer major. I know a good deal of Java and C, have a strong understanding of software project basics, and know how to figure out what I don’t know. As a Data Scientist, I am proficient in R, have a little exposure to things like Python and Machine Learning, and am developing my understanding of statistical methods that will be useful in my career. I excelled academically with a 3.26 cumulative GPA, and am ready to prove myself in the workforce. You can find the rest of my skills in my <a href="tdpotter-resume.pdf">resume</a>.</p>
 </div>
 
 
@@ -317,7 +330,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
